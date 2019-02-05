@@ -6,9 +6,9 @@
 FROM microsoft/aspnetcore:2.0
 
 # Create app directory
-WORKDIR /app
+WORKDIR /src/app
 
 # Copy files from the artifact staging folder on agent
-COPY BuildScripts/out .
+COPY src/out .
 
-ENTRYPOINT ["dotnet", "BuildScripts"]
+ENTRYPOINT ["dotnet", "*/*.dll"]
