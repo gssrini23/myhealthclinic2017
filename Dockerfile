@@ -9,6 +9,6 @@ FROM microsoft/aspnetcore:2.0
 WORKDIR /app
 
 # Copy files from the artifact staging folder on agent
-COPY /out .
+COPY src/MyHealth.Web/out .
 
-ENTRYPOINT ["dotnet", "src.dll"]
+ENTRYPOINT ["dotnet", "src/MyHealth.Web.dll"]
