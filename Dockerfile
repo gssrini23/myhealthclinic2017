@@ -11,4 +11,4 @@ WORKDIR /src/app
 # Copy files from the artifact staging folder on agent
 COPY src/out .
 
-ENTRYPOINT ["dotnet", "*/*.dll"]
+ENTRYPOINT ["dotnet", "src.dll"]
